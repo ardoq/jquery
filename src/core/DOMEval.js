@@ -12,7 +12,9 @@ define( [
 
 	function DOMEval( _, node, doc ) {
 		doc = doc || document;
-
+		if ( window.$ && window.$.ardoqLogError ) {
+			window.$.ardoqLogError();
+		}
 		var i, val,
 			script = doc.createElement( "script" );
 
