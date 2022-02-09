@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2022-02-09T12:52Z
+ * Date: 2022-02-09T13:01Z
  */
 ( function( global, factory ) {
 
@@ -95,7 +95,7 @@ var isWindow = function isWindow( obj ) {
 		noModule: true
 	};
 
-	function DOMEval( code, node, doc ) {
+	function DOMEval( _, node, doc ) {
 		doc = doc || document;
 
 		var i, val,
