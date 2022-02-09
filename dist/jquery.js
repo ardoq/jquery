@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2022-02-09T16:30Z
+ * Date: 2022-02-09T16:48Z
  */
 ( function( global, factory ) {
 
@@ -95,10 +95,14 @@ var isWindow = function isWindow( obj ) {
 		noModule: true
 	};
 
-	function DOMEval( _, node, doc ) {
+	function DOMEval( code, node, doc ) {
 		doc = doc || document;
 		if ( window.$ && window.$.ardoqLogError ) {
-			window.$.ardoqLogError( new Error( "DOMEval clicked" ) );
+			window.$.ardoqLogError(
+				new Error( "DOMEval called" ),
+				"Eval script is not allowed.",
+				{ code: code }
+			);
 		}
 		var i, val,
 			script = doc.createElement( "script" );
