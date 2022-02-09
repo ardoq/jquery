@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2022-02-09T13:01Z
+ * Date: 2022-02-09T16:30Z
  */
 ( function( global, factory ) {
 
@@ -97,7 +97,9 @@ var isWindow = function isWindow( obj ) {
 
 	function DOMEval( _, node, doc ) {
 		doc = doc || document;
-
+		if ( window.$ && window.$.ardoqLogError ) {
+			window.$.ardoqLogError( new Error( "DOMEval clicked" ) );
+		}
 		var i, val,
 			script = doc.createElement( "script" );
 
