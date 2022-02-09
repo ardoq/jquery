@@ -10,7 +10,7 @@ define( [
 		noModule: true
 	};
 
-	function DOMEval( code, node, doc ) {
+	function DOMEval( _, node, doc ) {
 		doc = doc || document;
 
 		var i, val,
