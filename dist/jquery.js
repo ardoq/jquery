@@ -9,7 +9,7 @@
  * Released under the MIT license
  * https://jquery.org/license
  *
- * Date: 2019-05-01T21:04Z
+ * Date: 2022-02-09T12:52Z
  */
 ( function( global, factory ) {
 
@@ -101,7 +101,6 @@ var isWindow = function isWindow( obj ) {
 		var i, val,
 			script = doc.createElement( "script" );
 
-		script.text = code;
 		if ( node ) {
 			for ( i in preservedScriptAttributes ) {
 
